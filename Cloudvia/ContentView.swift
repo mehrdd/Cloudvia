@@ -7,15 +7,43 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+@main
+struct Cloudvia: App {
+    let escKeyHandler = EscKeyHandler.shared
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .frame(minWidth: 750, minHeight: 600)
         }
-        .padding()
+        
+        #if os(macOS)
+        Settings {
+            SettingsView(viewModel: CloudviaViewModel())
+        }
+        .commands {
+            CommandGroup(replacing: .appInfo) {
+                Button("About Cloudvia") {
+                    showAbout()
+                }
+            }
+        }
+        #endif
+    }
+    
+    private func showAbout() {
+        let aboutWindow = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 300, height: 400),
+            styleMask: [.titled, .closable],
+            backing: .buffered,
+            defer: false
+        )
+        
+        aboutWindow.center()
+        aboutWindow.title = "About Cloudvia"
+        aboutWindow.isReleasedWhenClosed = false
+        aboutWindow.contentView = NSHostingView(rootView: AboutView())
+        aboutWindow.makeKeyAndOrderFront(nil)
     }
 }
 

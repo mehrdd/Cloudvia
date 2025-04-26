@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2E2DE0B32DBD2E6300437BD3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DE0B12DBD2E6000437BD3 /* LICENSE */; };
+		2E2DE0B62DBD2E7500437BD3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DE0B42DBD2E6D00437BD3 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2E2DE0952DBD2E5000437BD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		2E2DE0832DBD2E4E00437BD3 /* Cloudvia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudvia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2DE0942DBD2E5000437BD3 /* CloudviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2DE09E2DBD2E5000437BD3 /* CloudviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2DE0B12DBD2E6000437BD3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2E2DE0B42DBD2E6D00437BD3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +50,11 @@
 		2E2DE0A12DBD2E5000437BD3 /* CloudviaUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CloudviaUITests;
+			sourceTree = "<group>";
+		};
+		2E2DE0B72DBD427400437BD3 /* .github */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = .github;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,10 +87,13 @@
 		2E2DE07A2DBD2E4E00437BD3 = {
 			isa = PBXGroup;
 			children = (
+				2E2DE0B72DBD427400437BD3 /* .github */,
 				2E2DE0852DBD2E4E00437BD3 /* Cloudvia */,
 				2E2DE0972DBD2E5000437BD3 /* CloudviaTests */,
 				2E2DE0A12DBD2E5000437BD3 /* CloudviaUITests */,
 				2E2DE0842DBD2E4E00437BD3 /* Products */,
+				2E2DE0B12DBD2E6000437BD3 /* LICENSE */,
+				2E2DE0B42DBD2E6D00437BD3 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +124,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				2E2DE0852DBD2E4E00437BD3 /* Cloudvia */,
+				2E2DE0B72DBD427400437BD3 /* .github */,
 			);
 			name = Cloudvia;
 			packageProductDependencies = (
@@ -212,6 +228,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2DE0B32DBD2E6300437BD3 /* LICENSE in Resources */,
+				2E2DE0B62DBD2E7500437BD3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +407,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Cloudvia/Cloudvia.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cloudvia/Preview Content\"";
@@ -428,6 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Cloudvia/Cloudvia.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cloudvia/Preview Content\"";
